@@ -200,7 +200,7 @@ day15: [
   let workouts = []
   let current = 0;
   let isResting = false;
-  let timeLeft = 30;
+  let timeLeft = 120;
   let interval = null;
 
   
@@ -215,7 +215,7 @@ day15: [
     workouts = workoutRoutines[type];
     current = 0;
     isResting = false;
-    timeLeft = 30;
+    timeLeft = 120;
     nextStep();
   }
   
@@ -224,7 +224,7 @@ day15: [
     interval = null;
     current = 0;
     isResting = false;
-    timeLeft = 30;
+    timeLeft = 120;
     timerEl.textContent = "00:00";
     nameEl.textContent = "Stopped.";
     nameEl.classList.remove("resting");
@@ -258,7 +258,7 @@ day15: [
     if (!isResting) {
       nameEl.textContent = workouts[current];
       nameEl.classList.remove("resting");
-      timeLeft = 30;
+      timeLeft = 120;
     } else {
       nameEl.textContent = "Rest";
       nameEl.classList.add("resting");
@@ -269,6 +269,10 @@ day15: [
   
     interval = setInterval(() => {
       timerEl.textContent = formatTime(timeLeft);
+
+      if(!isResting && timeLeft > 0 && timeLeft%15 === 0 && timeLeft !==120){
+        ding.play();
+      }
       timeLeft--;
   
       if (timeLeft < 0) {
