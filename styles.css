@@ -26,6 +26,12 @@ body {
     margin-bottom: 20px;
   }
   
+  #workout-type {
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: black 3px solid;
+    border-radius: 5px;
+  }
   .buttons button {
     padding: 10px 20px;
     font-size: 16px;
