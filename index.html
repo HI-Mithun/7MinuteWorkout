@@ -7,33 +7,39 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <select name="" id="workout-type">
-            <option value="abs">Abs Focus</option>
-            <option value="classic">Classic</option>
-            <option value="legWorkout">Leg Workout</option>
-            <option value="armWorkout">Arm Workout</option>
-            <option value="stretching">Stretch</option>
-            <option value="day1">Day-1</option>
-            <option value="day2">Day-2</option>
-            <option value="day3">Day-3</option>
-            <option value="day4">Day-4</option>
-            <option value="day5">Day-5</option>
-            <option value="day6">Day-6</option>
-            <option value="day7">Day-7</option>
-            <option value="day8">Day-8</option>
-            <option value="day9">Day-9</option>
-            <option value="day10">Day-10</option>
-            <option value="day11">Day-11</option>
-            <option value="day12">Day-12</option>
-            <option value="day13">Day-13</option>
-            <option value="day14">Day-14</option>
-            <option value="day15">Day-15</option>
-            <option value="day16">Day-16</option>
-            <option value="day17">Day-17</option>
-            <option value="day18">Day-18</option>
-            <option value="day19">Day-19</option>
-            <option value="day20">Day-20</option>
+
+    <div class="main-layout">
+        <div id="side-panel">
+            <h3>Workout Plan</h3>
+            <ul id="workout-list"></ul>
+        </div>
+        <div class="container">
+            <select name="" id="workout-type" onchange="updateWorkoutList()">
+                <option value="abs">Abs Focus</option>
+                <option value="classic">Classic</option>
+                <option value="legWorkout">Leg Workout</option>
+                <option value="armWorkout">Arm Workout</option>
+                <option value="streteches">Stretch</option>
+                <option value="day1">Day-1</option>
+                <option value="day2">Day-2</option>
+                <option value="day3">Day-3</option>
+                <option value="day4">Day-4</option>
+                <option value="day5">Day-5</option>
+                <option value="day6">Day-6</option>
+                <option value="day7">Day-7</option>
+                <option value="day8">Day-8</option>
+                <option value="day9">Day-9</option>
+                <option value="day10">Day-10</option>
+                <option value="day11">Day-11</option>
+                <option value="day12">Day-12</option>
+                <option value="day13">Day-13</option>
+                <option value="day14">Day-14</option>
+                <option value="day15">Day-15</option>
+                <option value="day16">Day-16</option>
+                <option value="day17">Day-17</option>
+                <option value="day18">Day-18</option>
+                <option value="day19">Day-19</option>
+                <option value="day20">Day-20</option>
             <option value="day21">Day-21</option>
             <option value="day22">Day-22</option>
             <option value="day23">Day-23</option>
@@ -44,16 +50,17 @@
             <option value="day28">Day-28</option>
             <option value="day29">Day-29</option>
             <option value="day30">Day-30</option>
-
+            
         </select>
         <h1>7- Minute Workout</h1>
-    <div id="workout-name">Ready?</div>
-    <div id="timer">00:00</div>
-
-    <div class="buttons">
-      <button onclick="startWorkout()">Start</button>
-      <button onclick="stopWorkout()">Stop</button>
-      <button onclick="skipWorkout()">Skip</button>
+        <div id="workout-name">Ready?</div>
+        <div id="timer">00:00</div>
+        
+        <div class="buttons">
+            <button onclick="startWorkout()">Start</button>
+            <button onclick="stopWorkout()">Stop</button>
+            <button onclick="skipWorkout()">Skip</button>
+        </div>
     </div>
   </div>
 

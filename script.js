@@ -285,3 +285,16 @@ day15: [
     return `00:${sec < 10 ? "0" : ""}${sec}`;
   }
   
+  function updateWorkoutList(){
+    const type = document.getElementById("workout-type").value;
+    const list = workoutRoutines[type];
+    const listEl = document.getElementById("workout-list");
+
+    listEl.innerHTML = ""; // Clear the list
+
+    list.forEach((exercise, i) => {
+        const li = document.createElement("li");
+        li.textContent = `${i + 1}. ${exercise}`;
+        listEl.appendChild(li);
+    });
+  }
